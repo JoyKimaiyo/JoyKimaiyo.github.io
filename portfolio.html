@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Joyce's Portfolio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="description" content="Joy's portfolio as a Full Stack Data Scientist">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <div id="portfolio">
+        <div class="container">
+            <header id="header">
+                <nav>
+                    <img src="download__4_-removebg-preview.png" class="logo" alt="Logo">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li> 
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Projects</h1> <!-- Change this line -->
+                </div>
+            </header>
+            
+
+            <div class="portfolio-text">
+                <h1>Portfolio</h1>
+                <p>This is a collection of my data analyst projects in machine learning, web scraping, and exploratory analysis.</p>
+                
+                <!-- Project 1 -->
+                <div class="project">
+                    <h2>Data Analysis with SQL and Python Portfolio Project</h2>
+                    <img src="download (1).png" alt="Data Analysis with SQL and Python Project Image">
+                    <p>Data Description
+                        The dataset encompasses detailed insights into diverse renewable energy systems, encompassing metrics such as installed capacity, energy production, consumption, storage, investment, and environmental impact. Our objective is to furnish a holistic perspective on renewable energy, conducive to research and analysis in the field of sustainable energy.
+                        
+                          
+                    </p>
+                    <p><a href="https://medium.com/@joy.kimaiyo25/data-analysis-with-sql-and-python-portfolio-project-8673f69387ee" target="_blank">Read more</a></p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project">
+                    <h2>Scraping Google Search Results with Python</h2>
+                    <img src="SERP-Explained.jpg" alt="Scraping Google Search Results with Python Project Image">
+                    <p>A Search Engine Results Page (SERP) is the compilation of results presented by a search engine when prompted by a specific word or keyword phrase query. In this project, we aim to scrape data for a hypothetical website specializing in artificial intelligence and examine the strategies employed by competitors. Our chosen library for this task is g-spread.</p>
+                    <p><a href="https://medium.com/@joy.kimaiyo25/scrapin-google-search-results-with-python-c5b87e7d7541" target="_blank">Read more</a></p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project">
+                    <h2>Machine Learning Regression Analysis Portfolio Project</h2>
+                    <img src="download (10).png" alt="Machine Learning Regression Analysis Project Image">
+                    <p>Regression analysis is a form of predictive modeling technique that investigates the relationship between a dependent (target) and independent variable(s) (predictor). It is used to predict continuous variables. For instance, in this project, we will be predicting the price of the car (Toyota Corolla) based on its ‘Age’, ‘KM’, ‘FuelType’, ‘HP’, ‘MetColor’, ‘Automatic’, ‘CC’, ‘Doors’, ‘Weight’.</p>
+                    <p><a href="https://medium.com/@joy.kimaiyo25/beginner-friendly-machine-learning-regression-analysis-portfolio-project-a-step-by-step-guide-f90322df2eb9" target="_blank">Read more</a></p>
+                </div>
+                
+            </div>
+
+            <!-- Copyright Section -->
+            <footer id="copyright">
+                <div class="container">
+                    <p>&copy; Copyright <span id="year"></span> Joyce</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+
