@@ -12,8 +12,8 @@ html {
 
 body {
     background-color: #1e1e1e;
-    color: #ffffff;
-    font-size: 18px;
+    color:rgb(7, 65, 65);
+    font-size: 20px;
     margin: 0;
     padding: 0;
 }
@@ -36,6 +36,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    font-size: large;
 }
 
 .logo {
@@ -45,14 +46,14 @@ nav {
 nav ul li {
     list-style-type: none;
     margin: 10px 20px;
-    display: inline-block;
+    display: inline-block; 
 }
 
 nav ul li a {
     color: white; /* darkturquoise color */
     text-decoration: none;
-    font-size: 18px;
-    position: relative;
+    font-size: 500px;
+    position: relative; 
 }
 
 nav ul li a::after {
@@ -62,7 +63,7 @@ nav ul li a::after {
     background: #ffffff; /* white color */
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -6px; 
 }
 
 nav ul li a:hover::after {
@@ -73,17 +74,103 @@ nav ul li a:hover::after {
 .header-text {
     margin-top: 1%;
     font-size: 40px;
+    margin-left: 150px;
+    color:paleturquoise;
 }
 
 .header-text p {
-    color: white;
+    color: #dcdcdc;;
     font-size: large; /* Increase font size */
     margin: 10px 0;
+    margin-left: 20px;
     letter-spacing: 0.1em; /* Increase space between letters */
     word-spacing: 0.2em; /* Increase space between words */
     line-height: 2.8; /* Increase space between lines */
 }
- 
+section {
+    margin-left: 270px;
+    margin-bottom: 5px;
+    padding: 15px;
+    
+}
+
+section img {
+    width: 60%; /* Make images fill container */
+    height: auto;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+section h2 {
+    margin-top: 2px;
+    color: paleturquoise;
+}
+
+section li {
+    font-size: large; 
+    margin: 2px 0; /* Reduce vertical space */
+    word-spacing: 0.1em; /* Slightly reduce space between words */
+    line-height: 1.5; /* Reduce line spacing */
+    color: #dcdcdc;
+}
+
+#sidebar {
+    width: 250px;
+    background: #2C3E50;
+    padding: 20px;
+    color:rgb(2, 16, 16);
+    height: 100vh;
+    position: fixed;
+    margin-bottom: 20px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    margin: 40px 0;
+}
+
+.sidebar-links a {
+    color: paleturquoise;
+    text-decoration: none;
+    
+}
+
+#content {
+    margin-left: 270px;
+    padding: 20px;
+}
+#content h2 {
+    color: paleturquoise;
+}
+
+.article-card {
+    display: flex;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-card img {
+    width: 150px;
+    height: auto;
+}
+
+.article-content {
+    padding: 15px;
+}
+.article-content h2{
+    color: paleturquoise;
+}
+
+.article-content h3 {
+    margin: 0 0 10px;
+}
 
 /* Navigation Section Styles */
 #nav-section {
@@ -122,8 +209,9 @@ nav ul li a:hover::after {
 
 /* Contact Section Styles */
 #contact {
-    padding: 80px 0;
-    color: #ffffff;
+    padding: 20px 0;
+    color: paleturquoise;
+    margin-left: 190px;
 }
 
 .row {
@@ -201,4 +289,3 @@ form .btn2:hover {
         font-size: 16px;
     }
 }
-
