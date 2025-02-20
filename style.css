@@ -68,7 +68,7 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
     width: 100%;
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 .header-text {
