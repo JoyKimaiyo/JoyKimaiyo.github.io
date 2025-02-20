@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analyzing Digital Marketing Metrics</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -23,7 +22,7 @@
         }
         .nav a {
             text-decoration: none;
-            color: #add8e6; /* Light purple for nav links */
+            color: #89CFF0; /* Light purple for nav links */
             font-size: 18px;
             margin-left: 20px; /* Space between links */
         }
@@ -59,7 +58,7 @@
         }
         .toc ul li a {
             text-decoration: none;
-            color: #add8e6; /* Light purple for links */
+            color: #89CFF0; /* Light purple for links */
         }
         .toc ul li a:hover {
             text-decoration: underline;
@@ -85,7 +84,7 @@
         }
         .project a {
             text-decoration: none;
-            color: #add8e6; /* Light purple for project links */
+            color: #89CFF0; /* Light purple for project links */
         }
         .project a:hover {
             text-decoration: underline;
@@ -142,33 +141,35 @@
             <p>To differentiate between weekdays and weekends, the DAYOFWEEK() function is used, which returns a number from 1 to 7 representing the day of the week (1 = Sunday, 7 = Saturday). First, the table is altered to add a new column, day_type, to store the values. The table is then updated using a CASE function, categorizing days 1 and 7 as weekends and the rest as weekdays. Finally, buyer activity is analyzed by selecting day_type and orders, then grouping by day_type. The analysis indicates that weekdays have more active buyers than weekends.</p>
             
             <h2 id="Most Effective Campaign Types">Most Effective Campaign Types</h2>
-            <img src="1_tctcKTRz6VvrgjZu3EqQpA.webp">
+            <img src="1_tctcKTRz6VvrgjZu3EqQpA.webp"alt="Weekdays or weekends?" style="width: 100%; max-width: 600px;">>
             <p>To evaluate campaign effectiveness, ROMI per category is used, revealing that influencer campaigns yield the best results.</p>
             
             <h2 id="Best Geo_Locations">Best Geo-Locations for Targeting: Tier 1 vs. Tier 2 Cities</h2>
             <p>To determine the most effective geo-locations for targeting, overall ROMI per geo-location is analyzed. First, the table is altered to include a new column, ROMI, which stores the difference between revenue and marketing spend. The table is then updated with calculated values, and the geo-locations are selected, with ROMI summed as total_ROMI, grouped by geo-location, and ordered in descending order. The analysis indicates that Tier 1 cities yield a higher return on investment compared to Tier 2 cities.</p>
+            
             <h2 id="Other_Projects">Other Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <a href="project2.html">
-                        <img src="1-94.webp" alt="SQL Portfolio Project" style="width: 100%; max-width: 300px;">
-                        <p>SQL Portfolio Project: Analyzing Digital Marketing Metrics</p>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="project4.html">
-                        <img src="regression-of-machine-learning.webp" alt="Machine Learning Regression Analysis" style="width: 100%; max-width: 300px;">
-                        <p>Machine Learning Regression Analysis Portfolio Project: A Step-by-Step Guide</p>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="project3.html">
-                        <img src="1_Lpkg6vDuOOK6xmzhnEaAQg.webp" alt="Data Analysis with Python, SQL, and Power BI" style="width: 100%; max-width: 300px;">
-                        <p>Data Analysis with Python, SQL, and Power BI</p>
-                    </a>
+              
+                <div class="projects">
+                    <div class="project">
+                        <a href="project2.html">
+                            <img src="1-94.webp" alt="SQL Portfolio Project" style="width: 100%; max-width: 300px;">
+                            <p>SQL Portfolio Project: Analyzing Digital Marketing Metrics</p>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a href="project4.html">
+                            <img src="regression-of-machine-learning.webp" alt="Machine Learning Regression Analysis" style="width: 100%; max-width: 300px;">
+                            <p>Machine Learning Regression Analysis Portfolio Project: A Step-by-Step Guide</p>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a href="project3.html">
+                            <img src="1_Lpkg6vDuOOK6xmzhnEaAQg.webp" alt="Data Analysis with Python, SQL, and Power BI" style="width: 100%; max-width: 300px;">
+                            <p>Data Analysis with Python, SQL, and Power BI</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
         <div class="toc">
