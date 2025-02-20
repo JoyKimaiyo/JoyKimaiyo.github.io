@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzing Digital Marketing Metrics</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+        }
+        .nav {
+            display: flex;
+            justify-content: flex-end; /* Align to the right */
+            background-color: #1e1e1e; /* Darker background for nav */
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for nav links */
+            font-size: 18px;
+            margin-left: 20px; /* Space between links */
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+        }
+        .content {
+            flex: 3;
+            padding-right: 20px;
+        }
+        .toc {
+            flex: 1;
+            background: #1e1e1e; /* Darker background for TOC */
+            padding: 15px;
+            border-radius: 5px;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start; /* Align TOC to the top */
+        }
+        .toc h3 {
+            margin-top: 0;
+            color: #ffffff; /* White text for TOC heading */
+        }
+        .toc ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .toc ul li {
+            margin-bottom: 10px;
+        }
+        .toc ul li a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for links */
+        }
+        .toc ul li a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            border-bottom: 2px solid #333; /* Darker border for headings */
+            padding-bottom: 5px;
+            color: #ffffff; /* White text for headings */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .project {
+            text-align: center;
+            width: 30%;
+        }
+        .project a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for project links */
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Portfolio</a>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>SQL Portfolio Project: Analyzing Digital Marketing Metrics</h1>
+            <p><strong>By Joyce Kimaiyo</strong> | 6 min read</p>
+            
+            <h2 id="business-question">Business Question</h2>
+            <p>The digital marketing dataset from Kaggle (https://www.kaggle.com/datasets/sinderpreet/analyze-the-marketing-spending) was used for this project to analyze marketing expenditure, revenue generated, and customer behavior—specifically, identifying who clicked on the ad banner, who signed up, and who completed a purchase.
+
+                Additionally, various marketing metrics were calculated to assess the effectiveness of the campaign and identify key parameters relevant for further analysis. The project aimed to answer the following questions: <br> <br>Overall ROMI (Return on marketing investment)
+                ROMI by campaigns <br>
+                Performance of the campaign depending on the date — on which date did the company spend the most money on advertising, when did the company get the biggest revenue when conversion rates were high and low?
+                <br>
+                What were the average order values by the campaign? <br>
+                When buyers are more active? What is the average revenue on weekdays and weekends?<br>
+                Which types of campaigns work best — social, banner, influencer, or search?<br>
+                Which geo locations are better for targeting — tier 1 or tier 2 cities?</p>
+            
+            <h2 id="data-cleaning">Data Cleaning</h2>
+            <p>In the Campaign Name category, two types of information were grouped into one, requiring the identification of geo-locations that were more effective for targeting—Tier 1 or Tier 2 cities. It was necessary to separate "Facebook_tier1" from "Facebook" and "tier1," which was achieved by first altering the table and adding a new column. The column was then updated, and the substring_index string function was used to separate the two words using the underscore as a delimiter.
+
+                Additionally, there was an issue with inconsistent spelling in some instances of the word "Facebook," such as "facebOOK." To standardize the data, the .lower string function was applied to ensure all values in the column were converted to lowercase. Lastly, since MySQL expects date values in the YYYY-MM-DD format for proper date and time operations, the existing date format, which was in MM-DD-YYYY, needed to be converted accordingly.</p>
+            
+            <h2 id="Data_Analysis">Data Analysis</h2>
+            <img src="1_kfEVZguty2uuCaAc3vP4Zg.webp" alt="Data Analysis Screenshot" style="width: 100%; max-width: 600px;">
+            <p>
+                <li><span></span>Overall ROMI (Return on Marketing Investment)</span> <br> To calculate overall ROMI, the total revenue is summed, and the total marketing expenditure is subtracted.
+                </li>
+                <li><span>ROMI by Campaigns</span> <br> To calculate ROMI by campaign category, the data was grouped by campaign category by adding a category column to the SELECT clause.
+                </li>
+                <li><span>Date with the Highest Advertising Spend </span> <br>To determine the date on which the company spent the most on advertising, the date and market spend values can be selected, ordered by revenue in descending order, and limited to one result.
+                </li>
+                <li><span>Dates with the Highest Revenue and Conversion Rates</span> <br>
+                    To identify the date with the highest revenue, the date and revenue values were selected, ordered by revenue in descending order (from largest to smallest). This helps determine the periods when the company achieved high conversion rates from its campaigns.
+                </li>
+                <li><span>Average Order Values by Campaign</span> <br>
+                    To determine the average order value by campaign, the category and average number of orders are selected and then grouped by category.
+                </li>
+            </p>
+            <img src="1_11_StDADmO4jw40h-UMAhQ.webp" alt="Weekdays or weekends?" style="width: 100%; max-width: 600px;">
+            
+            <h2 id="Buyer Activity">Buyer Activity on Weekdays vs. Weekends</h2>
+            <p>To differentiate between weekdays and weekends, the DAYOFWEEK() function is used, which returns a number from 1 to 7 representing the day of the week (1 = Sunday, 7 = Saturday). First, the table is altered to add a new column, day_type, to store the values. The table is then updated using a CASE function, categorizing days 1 and 7 as weekends and the rest as weekdays. Finally, buyer activity is analyzed by selecting day_type and orders, then grouping by day_type. The analysis indicates that weekdays have more active buyers than weekends.</p>
+            
+            <h2 id="Most Effective Campaign Types">Most Effective Campaign Types</h2>
+            <img src="1_tctcKTRz6VvrgjZu3EqQpA.webp">
+            <p>To evaluate campaign effectiveness, ROMI per category is used, revealing that influencer campaigns yield the best results.</p>
+            
+            <h2 id="Best Geo_Locations">Best Geo-Locations for Targeting: Tier 1 vs. Tier 2 Cities</h2>
+            <p>To determine the most effective geo-locations for targeting, overall ROMI per geo-location is analyzed. First, the table is altered to include a new column, ROMI, which stores the difference between revenue and marketing spend. The table is then updated with calculated values, and the geo-locations are selected, with ROMI summed as total_ROMI, grouped by geo-location, and ordered in descending order. The analysis indicates that Tier 1 cities yield a higher return on investment compared to Tier 2 cities.</p>
+            <h2 id="Other_Projects">Other Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <a href="project2.html">
+                        <img src="1-94.webp" alt="SQL Portfolio Project" style="width: 100%; max-width: 300px;">
+                        <p>SQL Portfolio Project: Analyzing Digital Marketing Metrics</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="project4.html">
+                        <img src="regression-of-machine-learning.webp" alt="Machine Learning Regression Analysis" style="width: 100%; max-width: 300px;">
+                        <p>Machine Learning Regression Analysis Portfolio Project: A Step-by-Step Guide</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="project3.html">
+                        <img src="1_Lpkg6vDuOOK6xmzhnEaAQg.webp" alt="Data Analysis with Python, SQL, and Power BI" style="width: 100%; max-width: 300px;">
+                        <p>Data Analysis with Python, SQL, and Power BI</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#business-question">Business Question</a></li>
+                <li><a href="#data-cleaning">Data Cleaning</a></li>
+                <li><a href="#data-analysis">Data Analysis</a></li>
+                <li><a href="#buyer-activity">Buyer Activity</a></li>
+                <li><a href="#effective-campaign-types">Effective Campaign Types</a></li>
+                <li><a href="#best-geo-locations">Best Geo-Locations</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

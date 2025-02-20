@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Regression Analysis Portfolio Project</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+        }
+        .nav {
+            display: flex;
+            justify-content: flex-end; /* Align to the right */
+            background-color: #1e1e1e; /* Darker background for nav */
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for nav links */
+            font-size: 18px;
+            margin-left: 20px; /* Space between links */
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+        }
+        .content {
+            flex: 3;
+            padding-right: 20px;
+        }
+        .toc {
+            flex: 1;
+            background: #1e1e1e; /* Darker background for TOC */
+            padding: 15px;
+            border-radius: 5px;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start; /* Align TOC to the top */
+        }
+        .toc h3 {
+            margin-top: 0;
+            color: #ffffff; /* White text for TOC heading */
+        }
+        .toc ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .toc ul li {
+            margin-bottom: 10px;
+        }
+        .toc ul li a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for links */
+        }
+        .toc ul li a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            border-bottom: 2px solid #333; /* Darker border for headings */
+            padding-bottom: 5px;
+            color: #ffffff; /* White text for headings */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .project {
+            text-align: center;
+            width: 30%;
+        }
+        .project a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for project links */
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Portfolio</a>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>SQL Portfolio Project: Analyzing Digital Marketing Metrics</h1>
+            <p><strong>By Joyce Kimaiyo</strong> | 6 min read</p>
+            
+            <h2 id="business-question">Business Question</h2>
+            <p>This machine learning regression analysis project utilizes the Toyota Corolla CSV dataset to predict the price of a Toyota Corolla based on various features, including Age, KM, FuelType, HP, MetColor, Automatic, CC, Doors, and Weight.</p>
+            
+            <h2 id="Regression Analysis Overview">Regression Analysis Overview</h2>
+            <img src="1_owyGQHW_5aT07LTpz2R5RQ.webp" alt="Data Analysis Screenshot" style="width: 100%; max-width: 600px;">
+            <p>
+                Regression analysis is a predictive modeling technique that examines the relationship between a dependent (target) variable and independent (predictor) variables. It is primarily used for predicting continuous variables.
+            </p>
+            
+            
+            <h2 id="Libraries Used">Libraries Used</h2>
+            <p>Pandas: Data analysis, cleaning, exploration, and manipulation.
+                NumPy: Handling arrays and numerical computations.
+                Matplotlib & Seaborn: Data visualization.</p>
+            <h2 id="Exploratory Data Analysis (EDA)">Exploratory Data Analysis (EDA)</h2>
+            <img src="1_CI6EEwwrhxPakUdgw53KPg.webp" alt="Data Analysis Screenshot" style="width: 100%; max-width: 600px;">
+            <p>EDA is essential for understanding the dataset, identifying patterns, detecting anomalies, and validating assumptions. The dataset is already clean, with no null values or unnecessary columns. Distribution analysis is performed using visualizations.</p>
+            
+            <h2 id="Encoding Categorical Data">Encoding Categorical Data</h2>
+            <p>Since machine learning models require numerical inputs, categorical variables need to be encoded. One-hot encoding is applied to the FuelType column, replacing it with three new columns. One dummy column is dropped to prevent the dummy variable trap, ensuring that only n-1 categorical variables are used.</p>
+            
+            <h2 id="Feature Selection and Data Splitting">Feature Selection and Data Splitting</h2>
+           
+            <p>The independent variables (X) influence the dependent variable (Y), which is the car's price. The dataset is split into training and testing sets for model evaluation.</p>
+           
+            <h2 id="Linearity and Multicollinearity Check">Linearity and Multicollinearity Check</h2>
+            <img src="1_jLt6IyNSSK7Ly68rGk6pTA.webp"alt="Data Analysis Screenshot" style="width: 100%; max-width: 600px;">
+            <p>A good predictive relationship between the independent and dependent variables is necessary. Multicollinearity is checked using a correlation matrix, ensuring that correlation coefficients remain below 0.80, as recommended by NCBI.</p>
+            
+            <h2 id="Modeling Approaches">Modeling Approaches</h2>
+           
+            <p>The following machine learning models are implemented:
+
+                Linear Regression
+                Decision Tree Regressor
+                Support Vector Machine (SVM) Regressor
+                Random Forest Regressor </p>
+           
+            <h2 id="Model Evaluation">Model Evaluation</h2>
+            
+            <p>The performance of each model is assessed using the Root Mean Squared Error (RMSE), which measures the average difference between predicted and actual values. A lower RMSE indicates better model performance.
+
+               <span> RMSE Results </span> <br>
+                SVM: 3753.82 (Highest, least accurate) <br>
+                Random Forest: 1266.99 (Lowest, most accurate) <br>
+                Decision Tree: 1610.01 <br>
+                Linear Regression: 1422.64 <br>
+                <br>
+                <img src="1_owyGQHW_5aT07LTpz2R5RQ.webp" alt="Data Analysis Screenshot" style="width: 100%; max-width: 600px;">
+                The Random Forest model achieves the lowest RMSE, indicating it provides the most accurate predictions. Its ensemble approach, which combines multiple decision trees, reduces overfitting and enhances predictive accuracy. The SVM model has the highest RMSE, making it the least effective predictor in this scenario.
+                <br>
+               <span>📌 Complete code available at: GitHub Repository</span> 
+            <div class="projects">
+                <div class="project">
+                    <a href="project2.html">
+                        <img src="Screenshot (51).png" alt="SQL Portfolio Project" style="width: 100%; max-width: 300px;">
+                        <p>Analyzing Superstore Data with Python and Power BI (Project Portfolio)</p>
+                    </a>
+                </div>
+                <h2 id="Other_Projects">Other Projects</h2>
+                <div class="projects">
+                    <div class="project">
+                        <a href="project2.html">
+                            <img src="1-94.webp" alt="SQL Portfolio Project" style="width: 100%; max-width: 300px;">
+                            <p>SQL Portfolio Project: Analyzing Digital Marketing Metrics</p>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a href="project4.html">
+                            <img src="regression-of-machine-learning.webp" alt="Machine Learning Regression Analysis" style="width: 100%; max-width: 300px;">
+                            <p>Machine Learning Regression Analysis Portfolio Project: A Step-by-Step Guide</p>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a href="project3.html">
+                            <img src="1_Lpkg6vDuOOK6xmzhnEaAQg.webp" alt="Data Analysis with Python, SQL, and Power BI" style="width: 100%; max-width: 300px;">
+                            <p>Data Analysis with Python, SQL, and Power BI</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+           <ul>
+    <li><a href="#business-question">Business Question</a></li>
+    <li><a href="#regression-analysis-overview">Regression Analysis Overview</a></li>
+    <li><a href="#libraries-used">Libraries Used</a></li>
+    <li><a href="#exploratory-data-analysis">Exploratory Data Analysis (EDA)</a></li>
+    <li><a href="#encoding-categorical-data">Encoding Categorical Data</a></li>
+    <li><a href="#feature-selection-and-data-splitting">Feature Selection and Data Splitting</a></li>
+    <li><a href="#linearity-and-multicollinearity-check">Linearity and Multicollinearity Check</a></li>
+    <li><a href="#modeling-approaches">Modeling Approaches</a></li>
+    <li><a href="#model-evaluation">Model Evaluation</a></li>
+</ul>
+        </div>
+    </div>
+</body>
+</html>

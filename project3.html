@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzing Digital Marketing Metrics</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+        }
+        .nav {
+            display: flex;
+            justify-content: flex-end; /* Align to the right */
+            background-color: #1e1e1e; /* Darker background for nav */
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for nav links */
+            font-size: 18px;
+            margin-left: 20px; /* Space between links */
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+        }
+        .content {
+            flex: 3;
+            padding-right: 20px;
+        }
+        .toc {
+            flex: 1;
+            background: #1e1e1e; /* Darker background for TOC */
+            padding: 15px;
+            border-radius: 5px;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start; /* Align TOC to the top */
+        }
+        .toc h3 {
+            margin-top: 0;
+            color: #ffffff; /* White text for TOC heading */
+        }
+        .toc ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .toc ul li {
+            margin-bottom: 10px;
+        }
+        .toc ul li a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for links */
+        }
+        .toc ul li a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            border-bottom: 2px solid #333; /* Darker border for headings */
+            padding-bottom: 5px;
+            color: #ffffff; /* White text for headings */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .project {
+            text-align: center;
+            width: 30%;
+        }
+        .project a {
+            text-decoration: none;
+            color: #add8e6; /* Light purple for project links */
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Portfolio</a>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>Data Analysis with Python, SQL, and Power BI</h1>
+            <p><strong>By Joyce Kimaiyo</strong> | 3 min read</p>
+            
+            <h2 id="business-question">Business Question</h2>
+            <p>This project analyzes annual hotel operational data by importing the dataset into SQL using Python, performing data aggregation and merging tables with SQL queries, and creating visualizations in Power BI. The analysis aims to answer key business questions, including:
+                <br>
+             Is the hotel's revenue increasing year over year? <br>
+                Should the parking lot size be expanded?<br>
+                What trends can be observed in the data?</p> <br>
+            
+            <h2 id="Hotel Revenue Growth">Calculating Hotel Revenue Growth Year Over Year</h2>
+            <p>To assess revenue growth, SQL queries are used to aggregate and analyze data from imported datasets.
+
+                First, the UNION operator is applied to combine data from multiple tables ([dbo].[2018], [dbo].[2019], [dbo].[2020]) into a single dataset while removing duplicates. Revenue is then calculated by multiplying the sum of stays on both weeknights and weekends by the average daily rate (ADR). The data is grouped by arrival_date_year and ordered accordingly.
+                
+                The results indicate that hotel revenue increased significantly from 2018 to 2019, reaching a peak of $20.2 million, before declining to $14.2 million in 2020.</p>
+            
+            <h2 id="Connecting the Database to Power BI">Connecting the Database to Power BI</h2>
+            <img src="powerbi.webp" alt="Data Analysis Screenshot" style="width: 100%; max-width: 600px;">
+            <p>
+                <li>To visualize the data and generate actionable insights, the SQL Server database is connected to Power BI.
+
+                    A Card visualization is created to display the total number of required parking spaces (required_parking_space).
+                    A Map visualization is used to represent the distribution of customers by country.
+                    A second page is created to visualize trend and cost analyses.
+                </p>
+    
+            
+            <h2 id="Key Trends Identified">Key Trends Identified</h2>
+            <p>Revenue Distribution:<ol>Weeknights contribute 61.34% of total revenue.</ol> 
+            <ol>Cancellations: The number of cancellations (1,500+) is significant compared to non-cancellations (7,500).</ol>
+               <ol> Booking Channels: Online Travel Agencies (OTA) account for 66% of total revenue.</ol>
+               <ol>Revenue Contribution by Meal Plan: The Bed & Breakfast (BB) plan generates 71% of revenue.</ol>
+               <ol>Customer Segments: Transient customers contribute 85% of total revenue.</ol>
+                <ol>Loyalty and Repeat Guests: The hotel has a notable number of repeat guests (1.77k).</ol></p>
+    
+                <h2 id="Other_Projects">Other Projects</h2>
+                <div class="projects">
+                    <div class="project">
+                        <a href="project2.html">
+                            <img src="1-94.webp" alt="SQL Portfolio Project" style="width: 100%; max-width: 300px;">
+                            <p>SQL Portfolio Project: Analyzing Digital Marketing Metrics</p>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a href="project3.html">
+                            <img src="regression-of-machine-learning.webp" alt="Machine Learning Regression Analysis" style="width: 100%; max-width: 300px;">
+                            <p>Machine Learning Regression Analysis Portfolio Project: A Step-by-Step Guide</p>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a href="project4.html">
+                            <img src="1_Lpkg6vDuOOK6xmzhnEaAQg.webp" alt="Data Analysis with Python, SQL, and Power BI" style="width: 100%; max-width: 300px;">
+                            <p>Data Analysis with Python, SQL, and Power BI</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#business-question">Business Question</a></li>
+                <li><a href="#hotel-revenue-growth">Calculating Hotel Revenue Growth Year Over Year</a></li>
+                <li><a href="#connecting-the-database-to-power-bi">Connecting the Database to Power BI</a></li>
+                <li><a href="#key-trends-identified">Key Trends Identified</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
